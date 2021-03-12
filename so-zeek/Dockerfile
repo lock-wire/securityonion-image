@@ -18,7 +18,7 @@ FROM ghcr.io/security-onion-solutions/centos:7 as builder
 RUN yum update -y && \
     yum -y install epel-release bash libpcap iproute && \
     yum -y install jemalloc numactl libnl3 libdnet gdb GeoIP python-ipaddress python3 && \
-    yum -y install libpcap-devel openssl-devel zlib-devel jemalloc-devel python3-devel &&\
+    yum -y install libpcap-devel openssl-devel zlib-devel jemalloc-devel python3-devel kernel-devel kernel-headers &&\
     yum group install -y "Development Tools" && \
     pip3 install GitPython semantic-version && \
     yum -y install centos-release-scl && \

@@ -38,7 +38,7 @@ RUN source scl_source enable devtoolset-7 && cd zeek-$ZEEKVER && \
     make -j8 && make install 
 RUN yes | /opt/zeek/bin/zkg install ja3
 RUN yes | /opt/zeek/bin/zkg install hassh
-RUN source scl_source enable devtoolset-7 && yes | /opt/zeek/bin/zkg install https://github.com/TOoSmOotH/zeek-af_packet-plugin --version-master
+RUN source scl_source enable devtoolset-7 && yes | /opt/zeek/bin/zkg install https://github.com/TOoSmOotH/zeek-af_packet-plugin --version=master
 RUN source scl_source enable devtoolset-7 && yes | /opt/zeek/bin/zkg install zeek-community-id
 
 FROM ghcr.io/security-onion-solutions/centos:7
